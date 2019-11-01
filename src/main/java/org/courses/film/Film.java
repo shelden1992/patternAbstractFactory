@@ -36,8 +36,6 @@ public class Film {
         } else {
             stringJoiner.add(String.valueOf(subtitle));
         }
-
-
         return stringJoiner.toString();
     }
 

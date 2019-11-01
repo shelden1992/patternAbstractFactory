@@ -22,8 +22,8 @@ public class FilmsHolder {
     }
 
     public Film getFilmByName(String str) {
-        if (filmList.stream().anyMatch(getFilmPredicate(str))) {
-            Film film = filmList.stream().filter(getFilmPredicate(str)).findAny().orElse(null);
+        if (filmList.stream().anyMatch(ifContainInFilmHolder(str))) {
+            Film film = filmList.stream().filter(ifContainInFilmHolder(str)).findAny().orElse(null);
             LOG.info("Choose film = " + film);
             return film;
         } else LOG.info("It's film not available now" + str);
@@ -32,10 +32,10 @@ public class FilmsHolder {
 
     private int randomFilm() {
         int size = filmList.size();
-        return (int) (Math.random() * size);
+        return (int) (Math.random() * size - 1);
     }
 
-    private Predicate<Film> getFilmPredicate(String str) {
+    private Predicate<Film> ifContainInFilmHolder(String str) {
         return film -> film.getName().equals(str);
     }
 

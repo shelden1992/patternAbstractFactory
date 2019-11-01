@@ -13,6 +13,4 @@ public class ConsoleCommunication {
     public void showMessage(String message) {
         System.out.println(message);
     }
-
-
 }

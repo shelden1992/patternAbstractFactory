@@ -1,5 +1,6 @@
 package org.courses.services;
 
+import org.apache.log4j.Logger;
 import org.courses.AbstractFactory;
 import org.courses.FactoryChoose;
 import org.courses.audio.Audio;
@@ -12,6 +13,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class FilmServices {
+    private static final Logger LOG = Logger.getLogger(FilmServices.class);
     private static ConsoleCommunication console = ConsoleCommunication.getInstance();
     private static FilmsHolder filmsHolder;
     private static Film film;
@@ -41,6 +43,7 @@ public class FilmServices {
         FactoryChoose instance = FactoryChoose.getInstance();
         AbstractFactory langFactory = instance.getFactory(language);
         film.setAudio(langFactory.createAudio());
+        LOG.debug("Send audio to film ");
         film.setSubtitle(langFactory.createSubtitle());
 
     }
@@ -48,13 +51,14 @@ public class FilmServices {
     public void selectFilm() {
         System.out.println("Now select film, please");
         film = filmsHolder.getFilmByName(scanner.nextLine());
+        LOG.debug("Selected film = " + film);
 
     }
 
     public void selectLanguage() {
         System.out.println("Now select language, please" + FactoryChoose.getInstance().getLanguageList());
-
         language = scanner.nextLine();
+        LOG.debug("Selected language = " + language);
     }
 
     public Film getFilm() {
