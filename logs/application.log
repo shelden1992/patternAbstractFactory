@@ -1,0 +1,7 @@
+INFO main org.courses.film.FilmsHolder - Choose film = Film[name='Home Alone', timing=1.44, price=50.0, audio not selected, subtitle not selected]
+INFO main org.courses.film.FilmsHolder - Choose film = Film[name='Home Alone2', timing=1.33, price=45.0, audio not selected, subtitle not selected]
+INFO main org.courses.film.FilmsHolder - Choose film = Film[name='Home Alone', timing=1.44, price=50.0, audio not selected, subtitle not selected]
+INFO main org.courses.film.FilmsHolder - Choose film = Film[name='Home Alone2', timing=1.33, price=45.0, audio not selected, subtitle not selected]
+INFO main org.courses.film.FilmsHolder - Choose film = Film[name='Home Alone2', timing=1.33, price=45.0, audio not selected, subtitle not selected]
+INFO main org.courses.film.FilmsHolder - Choose film = Film[name='Home Alone2', timing=1.33, price=45.0, audio not selected, subtitle not selected]
+INFO main org.courses.film.FilmsHolder - Choose film = Film[name='New Year's Eve', timing=1.23, price=55.0, audio not selected, subtitle not selected]
